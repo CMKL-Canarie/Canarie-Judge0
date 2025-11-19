@@ -1,4 +1,5 @@
-FROM judge0/compilers:1.4.0 AS production
+ARG BASE_IMAGE=ghcr.io/cmkl-canarie/production/judge0-ce-compiler:latest
+FROM ${BASE_IMAGE} AS production
 
 ENV JUDGE0_HOMEPAGE "https://judge0.com"
 LABEL homepage=$JUDGE0_HOMEPAGE
